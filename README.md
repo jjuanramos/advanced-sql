@@ -56,8 +56,8 @@ Things worth noting in the final table.
 
 ### Instructions
 
-1. Write the SQL to produce the `effective_subscription_changes` table.
-2. Bonus: Write SQL to prove that _your_ `effective_subscription_changes` table matches the sample one
+1. Write the SQL to produce the `effective_subscription_changes` table. [solution](solutions/subscription-price-changes/solution.sql)
+2. Bonus: Write SQL to prove that _your_ `effective_subscription_changes` table matches the sample one. [solution](solutions/subscription-price-changes/bonus_solution.sql)
 
 Note: the above tables can all be queried from BigQuery — the [dbt tutorial](https://docs.getdbt.com/tutorial/setting-up#create-a-bigquery-project) has a handy section on how to create a BigQuery account and query a public dataset.
 
