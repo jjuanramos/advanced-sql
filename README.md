@@ -148,7 +148,7 @@ And for accounting purposes it looks like this:
 _Y I K E S_, that `task_id = 5` is particularly nasty — there's _three_ inbound payments, and we need to split the payout payment across the first two inbound payments, and then split the refund across the second and third payments. And no, apparently we can't apportion them according to their ratios — we instead need to first fully "refund" the first inbound payment (`inbound_payment_id = 11`), and then partially refund the second inbound payment (`inbound_payment_id = 12)`).
 
 ## Exercise
-1. Write the SQL to transform the ledger of payments into the format required by accounting. Use the following BigQuery tables, or load the CSVs in [apportioning-payments](/apportioning-payments) into the warehouse of your choice:
+1. Write the SQL to transform the ledger of payments into the format required by accounting. Use the following BigQuery tables, or load the CSVs in [apportioning-payments](/apportioning-payments) into the warehouse of your choice. [Solution](solutions/apportioning-payments/solution.sql)
 ```sql
 -- input data
 select * from `advanced-sql-challenges`.`apportioning_payments`.`payments`
@@ -159,7 +159,7 @@ select * from `advanced-sql-challenges`.`apportioning_payments`.`inbound_payment
 2. List the assumptions that you are making about your source data as you write this
 
 ## Bonus exercises
-1. Write SQL to prove that _your_ `inbound_payment_states` table matches the sample result.
+1. Write SQL to prove that _your_ `inbound_payment_states` table matches the sample result. [Solution](solutions/apportioning-payments/bonus_solution_1.sql)
 2. Consider how this might work for in-progress tasks that only have `inbound` payments, where an additional column `in_escrow` tracks any money held in the bank account.
 3. Consider what might happen if there are two refund payments for the one task
 
