@@ -1,3 +1,5 @@
+## Forked repo with two advanced SQL problems. Solved them and added the solutions [here](/solutions)
+
 # Advanced SQL challenges
 
 
